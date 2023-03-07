@@ -10,9 +10,17 @@ import UIKit
 
 class HomeViewController: StarbaucksViewController
 {
+    private var tableview: UITableView =
+    {
+        let table = UITableView()
+        table.translatesAutoresizingMaskIntoConstraints =  false
+        
+        return table
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.topItem?.title = "Good afternoon, Eriik😃"
+        self.navigationController?.navigationBar.isHidden = true
         setupTitle()
     }
     
@@ -26,15 +34,28 @@ extension HomeViewController
 {
     func setupTitle()
     {
-        //        let attributed = NSAttributedString(string: "/n Good afternoon,", attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .semibold),.foregroundColor: UIColor.label])
-        //        let mutableString = NSMutableAttributedString(string: "Eriik Elninno 😃", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .semibold)])
-        //        mutableString.append(attributed)
-        //
         let erickAttr = [NSAttributedString.Key.foregroundColor: UIColor.label,
                          NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1).bold()
         ]
         
         self.navigationController?.navigationBar.titleTextAttributes = erickAttr
         
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func setupHeaderView()
+    {
+        tableview.dataSource = self
+        tableview.delegate = self
     }
 }
