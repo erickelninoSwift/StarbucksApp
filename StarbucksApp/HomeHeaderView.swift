@@ -10,6 +10,8 @@ import UIKit
 
 class HomeHeaderView: UIView
 {
+    
+    static let headerviewIdentifier = "HomeHeaderViewCellid"
     lazy var greeting: UILabel =
         {
             let label = UILabel()

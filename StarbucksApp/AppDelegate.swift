@@ -96,7 +96,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let controller4 = UINavigationController(rootViewController: GiftViewController())
         
         tabController.tabBar.tintColor = .systemGreen
-//        tabController.tabBarItem.image?.withTintColor(.systemGreen, renderingMode: .alwaysOriginal)
         
         tabController.viewControllers = [controller1,controller2,controller3,controller4]
         window?.rootViewController = tabController

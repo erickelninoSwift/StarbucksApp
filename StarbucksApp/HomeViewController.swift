@@ -10,17 +10,27 @@ import UIKit
 
 class HomeViewController: StarbaucksViewController
 {
+    
+    private var homeheader: HomeHeaderView =
+    {
+        let view = HomeHeaderView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .systemBlue
+        return view
+    }()
+    
     private var tableview: UITableView =
     {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints =  false
-        
+        table.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.headerviewIdentifier)
         return table
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        setupHeaderView()
         setupTitle()
     }
     
@@ -57,5 +67,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource
     {
         tableview.dataSource = self
         tableview.delegate = self
+        tableview.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier:HomeHeaderView.headerviewIdentifier)
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return HomeHeaderView()
+    }
+    
+
 }
