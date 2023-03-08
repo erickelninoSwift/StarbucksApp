@@ -30,6 +30,7 @@ class HomeHeaderView: UIView
             button.translatesAutoresizingMaskIntoConstraints = false
             button.setTitleColor(.label, for: .normal)
             button.setTitle("Inbox", for: .normal)
+            button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
             return button
     }()
     
@@ -58,16 +59,17 @@ extension HomeHeaderView
     func layout()
     {
         
-        self.heightAnchor.constraint(equalToConstant: 300).isActive =  true
+        self.heightAnchor.constraint(equalToConstant: 150).isActive =  true
         
-        NSLayoutConstraint.activate([greeting.topAnchor.constraint(equalToSystemSpacingBelow: self.topAnchor, multiplier: 8),
+        NSLayoutConstraint.activate([greeting.topAnchor.constraint(equalToSystemSpacingBelow: self.topAnchor, multiplier: 2),
                                      greeting.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 1),
                                      self.trailingAnchor.constraint(equalToSystemSpacingAfter: greeting.trailingAnchor, multiplier: 1)
         ])
         
-        NSLayoutConstraint.activate([indexButton.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 4),
+        NSLayoutConstraint.activate([indexButton.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 1),
                                      indexButton.topAnchor.constraint(equalToSystemSpacingBelow: greeting.bottomAnchor, multiplier: 2),
-                                     self.bottomAnchor.constraint(equalToSystemSpacingBelow: indexButton.bottomAnchor, multiplier: 1)
+                                     self.bottomAnchor.constraint(equalToSystemSpacingBelow: indexButton.bottomAnchor, multiplier: 2)
+                                     
         ])
     }
 }
