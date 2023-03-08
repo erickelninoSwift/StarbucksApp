@@ -15,15 +15,15 @@ class HomeViewController: StarbaucksViewController
     {
         let view = HomeHeaderView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .lightGray
+        
         return view
     }()
     
-    private var tableview: UITableView =
+    var tableview: UITableView =
     {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints =  false
-        table.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier: HomeHeaderView.headerviewIdentifier)
         return table
     }()
     
@@ -38,41 +38,64 @@ class HomeViewController: StarbaucksViewController
         guard let image = UIImage(systemName: "house.fill") else {return}
         setTabBarImage(ImageName: image, title: "Home")
     }
+
 }
+
 
 extension HomeViewController
 {
     func setupTitle()
     {
-        let erickAttr = [NSAttributedString.Key.foregroundColor: UIColor.label,
-                         NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1).bold()
-        ]
-        
-        self.navigationController?.navigationBar.titleTextAttributes = erickAttr
+//        let erickAttr = [NSAttributedString.Key.foregroundColor: UIColor.label,
+//                         NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .title1).bold()
+//        ]
+//
+////        self.navigationController?.navigationBar.titleTextAttributes = erickAttr
+//
         
     }
 }
 
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource
 {
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = "Eriik"
+        return cell
     }
     
     func setupHeaderView()
     {
         tableview.dataSource = self
         tableview.delegate = self
-        tableview.register(HomeHeaderView.self, forHeaderFooterViewReuseIdentifier:HomeHeaderView.headerviewIdentifier)
+        
+        
+        view.addSubview(homeheader)
+        
+        NSLayoutConstraint.activate([homeheader.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 0),
+                                     homeheader.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 0),
+                                     view.trailingAnchor.constraint(equalToSystemSpacingAfter: homeheader.trailingAnchor, multiplier: 0)
+        ])
+        
+        
+        //        view.addSubview(tableview)
+        
+        //        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        //
+        //        NSLayoutConstraint.activate([tableview.leadingAnchor.constraint(equalToSystemSpacingAfter: self.view.leadingAnchor, multiplier: 1),
+        //                                     tableview.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 1),
+        //                                     view.trailingAnchor.constraint(equalToSystemSpacingAfter: tableview.trailingAnchor, multiplier: 1),
+        //                                     view.bottomAnchor.constraint(equalToSystemSpacingBelow: tableview.bottomAnchor, multiplier: 1)
+        //        ])
+        
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return HomeHeaderView()
-    }
-    
-
 }

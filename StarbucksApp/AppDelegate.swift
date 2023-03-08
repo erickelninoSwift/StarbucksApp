@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabController = UITabBarController()
         
-        let controller1 = makeNavigationController(controller: HomeViewController())
+        let controller1 = HomeViewController()
         let controller2 = UINavigationController(rootViewController: ScnaViewController())
         let controller3 = UINavigationController(rootViewController: OrderViewController())
         let controller4 = UINavigationController(rootViewController: GiftViewController())

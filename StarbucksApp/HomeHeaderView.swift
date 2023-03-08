@@ -12,7 +12,7 @@ class HomeHeaderView: UIView
 {
     
     static let headerviewIdentifier = "HomeHeaderViewCellid"
-    lazy var greeting: UILabel =
+    var greeting: UILabel =
         {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
@@ -51,14 +51,18 @@ extension HomeHeaderView
     {
         self.addSubview(greeting)
         self.addSubview(indexButton)
+        
     }
     
     
     func layout()
     {
-        NSLayoutConstraint.activate([greeting.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 1),
-                                     greeting.topAnchor.constraint(equalToSystemSpacingBelow: self.topAnchor, multiplier: 2),
-                                     
+        
+        self.heightAnchor.constraint(equalToConstant: 300).isActive =  true
+        
+        NSLayoutConstraint.activate([greeting.topAnchor.constraint(equalToSystemSpacingBelow: self.topAnchor, multiplier: 8),
+                                     greeting.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 1),
+                                     self.trailingAnchor.constraint(equalToSystemSpacingAfter: greeting.trailingAnchor, multiplier: 1)
         ])
         
         NSLayoutConstraint.activate([indexButton.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 4),
