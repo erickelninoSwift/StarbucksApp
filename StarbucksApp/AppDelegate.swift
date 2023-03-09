@@ -26,7 +26,7 @@ class StarbaucksViewController: UIViewController
     
     func setTabBarImage(ImageName: UIImage, title: String)
     {
-        self.tabBarItem = UITabBarItem(title: title, image: ImageName.withTintColor(.systemGreen, renderingMode: .alwaysOriginal), tag: 0)
+        self.tabBarItem = UITabBarItem(title: title, image: ImageName, tag: 0)
     }
 
 }
@@ -95,7 +95,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let controller3 = UINavigationController(rootViewController: OrderViewController())
         let controller4 = UINavigationController(rootViewController: GiftViewController())
         
-        tabController.tabBar.tintColor = .systemGreen
+        tabController.tabBar.tintColor = .lightGreen
+        tabController.tabBar.isTranslucent = false
         
         tabController.viewControllers = [controller1,controller2,controller3,controller4]
         window?.rootViewController = tabController

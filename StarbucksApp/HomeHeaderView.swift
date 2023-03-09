@@ -33,16 +33,6 @@ class HomeHeaderView: UIView
             return button
     }()
     
-//    lazy var indexButtonImage: UIButton =
-//        {
-//            let button = UIButton(type: .system)
-//            button.translatesAutoresizingMaskIntoConstraints = false
-//            button.setImage(UIImage(systemName: "envelope")?.withRenderingMode(.alwaysOriginal), for: .normal)
-//            button.imageView?.clipsToBounds = true
-//
-//            return button
-//    }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -80,7 +70,9 @@ extension HomeHeaderView
         
         NSLayoutConstraint.activate([indexButton.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 2),
                                      indexButton.topAnchor.constraint(equalToSystemSpacingBelow: greeting.bottomAnchor, multiplier: 2),
-                                     self.bottomAnchor.constraint(equalToSystemSpacingBelow: indexButton.bottomAnchor, multiplier: 2)
+                                     self.bottomAnchor.constraint(equalToSystemSpacingBelow: indexButton.bottomAnchor, multiplier: 1),
+                                     indexButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.25)
+                                     
             
         ])
     }
@@ -91,7 +83,12 @@ extension HomeHeaderView
     func makeInboxButton()
     {
         indexButton.setTitle("Inbox", for: .normal)
+        indexButton.setTitleColor(.secondaryLabel, for: .normal)
+        
+        
         indexButton.setImage(UIImage(systemName: "envelope")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        indexButton.imageView?.contentMode = .scaleAspectFit
+        indexButton.imageView?.tintColor = .secondaryLabel
         
         indexButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         indexButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16)
