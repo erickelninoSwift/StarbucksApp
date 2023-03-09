@@ -19,13 +19,13 @@ class HomeViewController: StarbaucksViewController
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
-    var tableview: UITableView =
-    {
-        let table = UITableView()
-        table.translatesAutoresizingMaskIntoConstraints =  false
-        return table
-    }()
+//
+//    var tableview: UITableView =
+//    {
+//        let table = UITableView()
+//        table.translatesAutoresizingMaskIntoConstraints =  false
+//        return table
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,27 +50,27 @@ extension HomeViewController
 }
 
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource
+extension HomeViewController
 {
     
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "Eriik"
-        cell.accessoryType = .disclosureIndicator
-        return cell
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 5
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        cell.textLabel?.text = "Eriik"
+//        cell.accessoryType = .disclosureIndicator
+//        return cell
+//    }
     
     func setupHeaderView()
     {
-        tableview.dataSource = self
-        tableview.delegate = self
-        tableview.tableFooterView = UIView()
+//        tableview.dataSource = self
+//        tableview.delegate = self
+//        tableview.tableFooterView = UIView()
         
         view.addSubview(homeheader)
         
@@ -82,25 +82,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource
         ])
         
         
-        view.addSubview(tableview)
-        
-        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-        NSLayoutConstraint.activate([tableview.leadingAnchor.constraint(equalToSystemSpacingAfter: self.view.leadingAnchor, multiplier: 1),
-                                     tableview.topAnchor.constraint(equalToSystemSpacingBelow: homeheader.bottomAnchor, multiplier: 1),
-                                     view.trailingAnchor.constraint(equalToSystemSpacingAfter: tableview.trailingAnchor, multiplier: 1),
-                                     view.bottomAnchor.constraint(equalToSystemSpacingBelow: tableview.bottomAnchor, multiplier: 1)
-        ])
+//        view.addSubview(tableview)
+//
+//        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+//
+//        NSLayoutConstraint.activate([tableview.leadingAnchor.constraint(equalToSystemSpacingAfter: self.view.leadingAnchor, multiplier: 1),
+//                                     tableview.topAnchor.constraint(equalToSystemSpacingBelow: homeheader.bottomAnchor, multiplier: 1),
+//                                     view.trailingAnchor.constraint(equalToSystemSpacingAfter: tableview.trailingAnchor, multiplier: 1),
+//                                     view.bottomAnchor.constraint(equalToSystemSpacingBelow: tableview.bottomAnchor, multiplier: 1)
+//        ])
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 200
+//    }
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
