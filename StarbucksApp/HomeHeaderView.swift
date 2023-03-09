@@ -13,15 +13,15 @@ class HomeHeaderView: UIView
     
     static let headerviewIdentifier = "HomeHeaderViewCellid"
     var greeting: UILabel =
-        {
-            let label = UILabel()
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-            label.text = "Good afternoon, Eriik ☀️"
-            label.numberOfLines = 0
-            label.lineBreakMode = .byWordWrapping
-            
-            return label
+    {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 30, weight: .light)
+        label.text = " Good afternoon, \n Eriik ☀️"
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        
+        return label
     }()
     
     lazy var indexButton: UIButton =
@@ -29,13 +29,24 @@ class HomeHeaderView: UIView
             let button = UIButton(type: .system)
             button.translatesAutoresizingMaskIntoConstraints = false
             button.setTitleColor(.label, for: .normal)
-            button.setTitle("Inbox", for: .normal)
-            button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .light)
             return button
     }()
     
+//    lazy var indexButtonImage: UIButton =
+//        {
+//            let button = UIButton(type: .system)
+//            button.translatesAutoresizingMaskIntoConstraints = false
+//            button.setImage(UIImage(systemName: "envelope")?.withRenderingMode(.alwaysOriginal), for: .normal)
+//            button.imageView?.clipsToBounds = true
+//
+//            return button
+//    }()
+    
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        makeInboxButton()
         style()
         layout()
     }
@@ -52,6 +63,7 @@ extension HomeHeaderView
     {
         self.addSubview(greeting)
         self.addSubview(indexButton)
+//        self.addSubview(indexButtonImage)
         
     }
     
@@ -66,10 +78,22 @@ extension HomeHeaderView
                                      self.trailingAnchor.constraint(equalToSystemSpacingAfter: greeting.trailingAnchor, multiplier: 1)
         ])
         
-        NSLayoutConstraint.activate([indexButton.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 1),
+        NSLayoutConstraint.activate([indexButton.leadingAnchor.constraint(equalToSystemSpacingAfter: self.leadingAnchor, multiplier: 2),
                                      indexButton.topAnchor.constraint(equalToSystemSpacingBelow: greeting.bottomAnchor, multiplier: 2),
                                      self.bottomAnchor.constraint(equalToSystemSpacingBelow: indexButton.bottomAnchor, multiplier: 2)
-                                     
+            
         ])
+    }
+}
+
+extension HomeHeaderView
+{
+    func makeInboxButton()
+    {
+        indexButton.setTitle("Inbox", for: .normal)
+        indexButton.setImage(UIImage(systemName: "envelope")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        indexButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        indexButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16)
     }
 }
