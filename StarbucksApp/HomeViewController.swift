@@ -57,25 +57,43 @@ extension HomeViewController
     {
         stackview.translatesAutoresizingMaskIntoConstraints = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
         
+        stackview.axis = .vertical
+        stackview.spacing = 10
+        stackview.distribution = .fillEqually
+        
+        
+        view.addSubview(scrollView)
+        scrollView.addSubview(stackview)
         
     }
     
     
     private func layout()
     {
-        stackview.axis = .vertical
-        stackview.spacing = 8
-        stackview.distribution = .equalSpacing
         
-        scrollView.backgroundColor = .lightGreen
+        
+        self.TileController.forEach { mytile in
+            self.addChild(mytile)
+            self.stackview.addArrangedSubview(mytile.view)
+            self.didMove(toParent: self)
+        }
+        
+        
         
         NSLayoutConstraint.activate([scrollView.topAnchor.constraint(equalToSystemSpacingBelow: homeheader.bottomAnchor, multiplier: 1),
                                      scrollView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
                                      view.trailingAnchor.constraint(equalToSystemSpacingAfter: scrollView.trailingAnchor, multiplier: 1),
-                                     view.bottomAnchor.constraint(equalToSystemSpacingBelow: scrollView.bottomAnchor, multiplier: 1)
-                                     
+                                     view.safeAreaLayoutGuide.bottomAnchor.constraint(equalToSystemSpacingBelow: scrollView.bottomAnchor, multiplier: 0)
+            
+        ])
+        
+        NSLayoutConstraint.activate([stackview.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 8),
+                                     stackview.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+                                     scrollView.trailingAnchor.constraint(equalTo: stackview.trailingAnchor),
+                                     scrollView.bottomAnchor.constraint(equalTo: stackview.bottomAnchor),
+                                     stackview.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            
         ])
         
     }
@@ -96,7 +114,6 @@ extension HomeViewController
     
     func setupHeaderView()
     {
-        
         
         view.addSubview(homeheader)
         

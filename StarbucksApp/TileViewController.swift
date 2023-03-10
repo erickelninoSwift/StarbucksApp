@@ -11,10 +11,9 @@ import UIKit
 class TileViewController: UIViewController
 {
     
-    lazy var titlelabel: UILabel =
+    let titlelabel: UILabel =
     {
         let label = UILabel()
-       
         return label
         
     }()
@@ -41,6 +40,7 @@ extension TileViewController
 {
     private func style()
     {
+        view.addSubview(titlelabel)
         self.titlelabel.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -48,11 +48,10 @@ extension TileViewController
     
     private func layout()
     {
-        view.addSubview(titlelabel)
-        
         NSLayoutConstraint.activate([titlelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                                      titlelabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                                     titlelabel.heightAnchor.constraint(equalToConstant: 300)
+                                     self.view.heightAnchor.constraint(equalToConstant: 300)
+                                     
         ])
     }
 }

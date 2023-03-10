@@ -39,6 +39,7 @@ class HomeHeaderView: UIView
         makeInboxButton()
         style()
         layout()
+//        self.backgroundColor = .systemGray2
     }
     
     required init?(coder: NSCoder) {
