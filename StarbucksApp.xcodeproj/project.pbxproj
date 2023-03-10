@@ -10,6 +10,7 @@
 		9459E50E29B6A9F500CDDD73 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E50D29B6A9F500CDDD73 /* Extension.swift */; };
 		9459E51529B6D0C200CDDD73 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E51429B6D0C200CDDD73 /* HomeHeaderView.swift */; };
 		9459E51829BA3C7100CDDD73 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E51729BA3C7100CDDD73 /* Extensions.swift */; };
+		9459E51A29BA60FF00CDDD73 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E51929BA60FF00CDDD73 /* TileViewController.swift */; };
 		949DED6E29B61243002D3DD5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949DED6D29B61243002D3DD5 /* HomeViewController.swift */; };
 		94B0FD5A29B436D7007B2921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0FD5929B436D7007B2921 /* AppDelegate.swift */; };
 		94B0FD6329B43727007B2921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B0FD6229B43727007B2921 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 		9459E50D29B6A9F500CDDD73 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9459E51429B6D0C200CDDD73 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		9459E51729BA3C7100CDDD73 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9459E51929BA60FF00CDDD73 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		949DED6D29B61243002D3DD5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		94B0FD5629B436D7007B2921 /* StarbucksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarbucksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B0FD5929B436D7007B2921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				949DED6D29B61243002D3DD5 /* HomeViewController.swift */,
+				9459E51929BA60FF00CDDD73 /* TileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				9459E51829BA3C7100CDDD73 /* Extensions.swift in Sources */,
 				9459E51529B6D0C200CDDD73 /* HomeHeaderView.swift in Sources */,
+				9459E51A29BA60FF00CDDD73 /* TileViewController.swift in Sources */,
 				9459E50E29B6A9F500CDDD73 /* Extension.swift in Sources */,
 				94B0FD5A29B436D7007B2921 /* AppDelegate.swift in Sources */,
 				949DED6E29B61243002D3DD5 /* HomeViewController.swift in Sources */,

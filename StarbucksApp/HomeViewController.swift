@@ -13,25 +13,34 @@ class HomeViewController: StarbaucksViewController
     
     var headerviewtopAnchpr: NSLayoutConstraint?
     
+    private var scrollView = UIScrollView()
+    
+    private var stackview = UIStackView()
+    
+    var TileController = [TileViewController(titlelabel: "Star Balance"),
+                          TileViewController(titlelabel: "Bonus Stars"),
+                          TileViewController(titlelabel: "Try these"),
+                          TileViewController(titlelabel: "Welcome back"),
+                          TileViewController(titlelabel: "Uplifting"),
+    ]
+    
     private var homeheader: HomeHeaderView =
     {
         let view = HomeHeaderView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-//
-//    var tableview: UITableView =
-//    {
-//        let table = UITableView()
-//        table.translatesAutoresizingMaskIntoConstraints =  false
-//        return table
-//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         setupHeaderView()
         setupTitle()
+        
+        style()
+        layout()
+        setupScollview()
+        
     }
     
     override func comonIni() {
@@ -39,6 +48,37 @@ class HomeViewController: StarbaucksViewController
         setTabBarImage(ImageName: image, title: "Home")
     }
     
+}
+
+
+extension HomeViewController
+{
+    private func style()
+    {
+        stackview.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scrollView)
+        
+        
+    }
+    
+    
+    private func layout()
+    {
+        stackview.axis = .vertical
+        stackview.spacing = 8
+        stackview.distribution = .equalSpacing
+        
+        scrollView.backgroundColor = .lightGreen
+        
+        NSLayoutConstraint.activate([scrollView.topAnchor.constraint(equalToSystemSpacingBelow: homeheader.bottomAnchor, multiplier: 1),
+                                     scrollView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 1),
+                                     view.trailingAnchor.constraint(equalToSystemSpacingAfter: scrollView.trailingAnchor, multiplier: 1),
+                                     view.bottomAnchor.constraint(equalToSystemSpacingBelow: scrollView.bottomAnchor, multiplier: 1)
+                                     
+        ])
+        
+    }
 }
 
 
@@ -54,23 +94,9 @@ extension HomeViewController
 {
     
     
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 5
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableview.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        cell.textLabel?.text = "Eriik"
-//        cell.accessoryType = .disclosureIndicator
-//        return cell
-//    }
-    
     func setupHeaderView()
     {
-//        tableview.dataSource = self
-//        tableview.delegate = self
-//        tableview.tableFooterView = UIView()
+        
         
         view.addSubview(homeheader)
         
@@ -81,27 +107,15 @@ extension HomeViewController
                                      view.trailingAnchor.constraint(equalToSystemSpacingAfter: homeheader.trailingAnchor, multiplier: 0)
         ])
         
-        
-//        view.addSubview(tableview)
-//
-//        tableview.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-//
-//        NSLayoutConstraint.activate([tableview.leadingAnchor.constraint(equalToSystemSpacingAfter: self.view.leadingAnchor, multiplier: 1),
-//                                     tableview.topAnchor.constraint(equalToSystemSpacingBelow: homeheader.bottomAnchor, multiplier: 1),
-//                                     view.trailingAnchor.constraint(equalToSystemSpacingAfter: tableview.trailingAnchor, multiplier: 1),
-//                                     view.bottomAnchor.constraint(equalToSystemSpacingBelow: tableview.bottomAnchor, multiplier: 1)
-//        ])
-        
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 200
-//    }
-    
+}
+
+extension HomeViewController: UIScrollViewDelegate
+{
+    private func setupScollview()
+    {
+        scrollView.delegate = self
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y = scrollView.contentOffset.y
@@ -121,5 +135,4 @@ extension HomeViewController
         }, completion: nil)
         
     }
-    
 }
