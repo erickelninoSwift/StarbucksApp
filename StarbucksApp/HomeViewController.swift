@@ -17,11 +17,11 @@ class HomeViewController: StarbaucksViewController
     
     private var stackview = UIStackView()
     
-    var TileController = [TileViewController(titlelabel: "Star Balance"),
-                          TileViewController(titlelabel: "Bonus Stars"),
-                          TileViewController(titlelabel: "Try these"),
-                          TileViewController(titlelabel: "Welcome back"),
-                          TileViewController(titlelabel: "Uplifting"),
+    var TileController = [TileViewPlaceholderController(titlelabel: "Star Balance"),
+                          TileViewPlaceholderController(titlelabel: "Bonus Stars"),
+                          TileViewPlaceholderController(titlelabel: "Try these"),
+                          TileViewPlaceholderController(titlelabel: "Welcome back"),
+                          TileViewPlaceholderController(titlelabel: "Uplifting"),
     ]
     
     private var homeheader: HomeHeaderView =

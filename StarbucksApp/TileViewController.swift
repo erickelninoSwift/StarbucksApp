@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TileViewController: UIViewController
+class TileViewPlaceholderController: UIViewController
 {
     
     let titlelabel: UILabel =
@@ -36,7 +36,7 @@ class TileViewController: UIViewController
     }
 }
 
-extension TileViewController
+extension TileViewPlaceholderController
 {
     private func style()
     {

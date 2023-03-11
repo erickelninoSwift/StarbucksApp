@@ -12,6 +12,7 @@ class HomeHeaderView: UIView
 {
     
     static let headerviewIdentifier = "HomeHeaderViewCellid"
+    
     var greeting: UILabel =
     {
         let label = UILabel()
@@ -39,7 +40,7 @@ class HomeHeaderView: UIView
         makeInboxButton()
         style()
         layout()
-//        self.backgroundColor = .systemGray2
+
     }
     
     required init?(coder: NSCoder) {
@@ -54,7 +55,7 @@ extension HomeHeaderView
     {
         self.addSubview(greeting)
         self.addSubview(indexButton)
-//        self.addSubview(indexButtonImage)
+
         
     }
     
