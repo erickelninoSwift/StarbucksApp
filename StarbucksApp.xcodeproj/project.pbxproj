@@ -13,6 +13,7 @@
 		940A9F7A29BE59CA00B67FC6 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9F7929BE59CA00B67FC6 /* RewardsViewController.swift */; };
 		940A9F7C29BE5B1F00B67FC6 /* RewardTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9F7B29BE5B1F00B67FC6 /* RewardTileView.swift */; };
 		940A9F7E29BE68A800B67FC6 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9F7D29BE68A800B67FC6 /* BalanceView.swift */; };
+		941E05E729C2984F00E64118 /* RewardGraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941E05E629C2984F00E64118 /* RewardGraphicView.swift */; };
 		9459E50E29B6A9F500CDDD73 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E50D29B6A9F500CDDD73 /* Extension.swift */; };
 		9459E51529B6D0C200CDDD73 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E51429B6D0C200CDDD73 /* HomeHeaderView.swift */; };
 		9459E51829BA3C7100CDDD73 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459E51729BA3C7100CDDD73 /* Extensions.swift */; };
@@ -29,6 +30,7 @@
 		940A9F7929BE59CA00B67FC6 /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		940A9F7B29BE5B1F00B67FC6 /* RewardTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTileView.swift; sourceTree = "<group>"; };
 		940A9F7D29BE68A800B67FC6 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		941E05E629C2984F00E64118 /* RewardGraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardGraphicView.swift; sourceTree = "<group>"; };
 		9459E50D29B6A9F500CDDD73 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9459E51429B6D0C200CDDD73 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		9459E51729BA3C7100CDDD73 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				940A9F7929BE59CA00B67FC6 /* RewardsViewController.swift */,
 				940A9F7B29BE5B1F00B67FC6 /* RewardTileView.swift */,
 				940A9F7D29BE68A800B67FC6 /* BalanceView.swift */,
+				941E05E629C2984F00E64118 /* RewardGraphicView.swift */,
 			);
 			name = Rewards;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				9459E51829BA3C7100CDDD73 /* Extensions.swift in Sources */,
 				940A9F7E29BE68A800B67FC6 /* BalanceView.swift in Sources */,
 				9459E51529B6D0C200CDDD73 /* HomeHeaderView.swift in Sources */,
+				941E05E729C2984F00E64118 /* RewardGraphicView.swift in Sources */,
 				940A9F7729BC15E400B67FC6 /* TileView.swift in Sources */,
 				940A9F7329BC130200B67FC6 /* TileViewPlaceholderController.swift in Sources */,
 				940A9F7529BC15D500B67FC6 /* TileViewController.swift in Sources */,
