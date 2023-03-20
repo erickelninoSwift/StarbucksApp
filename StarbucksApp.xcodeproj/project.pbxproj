@@ -21,6 +21,8 @@
 		94B0FD5A29B436D7007B2921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B0FD5929B436D7007B2921 /* AppDelegate.swift */; };
 		94B0FD6329B43727007B2921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B0FD6229B43727007B2921 /* Assets.xcassets */; };
 		94B0FD6629B43727007B2921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B0FD6429B43727007B2921 /* LaunchScreen.storyboard */; };
+		94C0FA5929C803CF00C951BD /* StarsPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C0FA5829C803CF00C951BD /* StarsPointView.swift */; };
+		94C0FA5B29C80B2F00C951BD /* StarsPointViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C0FA5A29C80B2F00C951BD /* StarsPointViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		94B0FD6229B43727007B2921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B0FD6529B43727007B2921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94B0FD6729B43727007B2921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C0FA5829C803CF00C951BD /* StarsPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPointView.swift; sourceTree = "<group>"; };
+		94C0FA5A29C80B2F00C951BD /* StarsPointViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPointViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,15 @@
 				941E05E629C2984F00E64118 /* RewardGraphicView.swift */,
 			);
 			name = Rewards;
+			sourceTree = "<group>";
+		};
+		943CD2E929C6A35F00EA2296 /* StarsRewards */ = {
+			isa = PBXGroup;
+			children = (
+				94C0FA5829C803CF00C951BD /* StarsPointView.swift */,
+				94C0FA5A29C80B2F00C951BD /* StarsPointViewRow.swift */,
+			);
+			name = StarsRewards;
 			sourceTree = "<group>";
 		};
 		9459E50F29B6CBA900CDDD73 /* Model */ = {
@@ -89,6 +102,7 @@
 		9459E51229B6CBCD00CDDD73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				943CD2E929C6A35F00EA2296 /* StarsRewards */,
 				940A9F7829BE59B100B67FC6 /* Rewards */,
 				949DED6D29B61243002D3DD5 /* HomeViewController.swift */,
 				940A9F7229BC130200B67FC6 /* TileViewPlaceholderController.swift */,
@@ -226,8 +240,10 @@
 				940A9F7329BC130200B67FC6 /* TileViewPlaceholderController.swift in Sources */,
 				940A9F7529BC15D500B67FC6 /* TileViewController.swift in Sources */,
 				9459E50E29B6A9F500CDDD73 /* Extension.swift in Sources */,
+				94C0FA5929C803CF00C951BD /* StarsPointView.swift in Sources */,
 				940A9F7C29BE5B1F00B67FC6 /* RewardTileView.swift in Sources */,
 				94B0FD5A29B436D7007B2921 /* AppDelegate.swift in Sources */,
+				94C0FA5B29C80B2F00C951BD /* StarsPointViewRow.swift in Sources */,
 				949DED6E29B61243002D3DD5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
