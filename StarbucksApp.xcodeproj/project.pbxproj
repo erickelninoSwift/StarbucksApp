@@ -23,6 +23,7 @@
 		94B0FD6629B43727007B2921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B0FD6429B43727007B2921 /* LaunchScreen.storyboard */; };
 		94C0FA5929C803CF00C951BD /* StarsPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C0FA5829C803CF00C951BD /* StarsPointView.swift */; };
 		94C0FA5B29C80B2F00C951BD /* StarsPointViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C0FA5A29C80B2F00C951BD /* StarsPointViewRow.swift */; };
+		94C0FA5D29C890A500C951BD /* StarRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C0FA5C29C890A500C951BD /* StarRewardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		94B0FD6729B43727007B2921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C0FA5829C803CF00C951BD /* StarsPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPointView.swift; sourceTree = "<group>"; };
 		94C0FA5A29C80B2F00C951BD /* StarsPointViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPointViewRow.swift; sourceTree = "<group>"; };
+		94C0FA5C29C890A500C951BD /* StarRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				94C0FA5829C803CF00C951BD /* StarsPointView.swift */,
 				94C0FA5A29C80B2F00C951BD /* StarsPointViewRow.swift */,
+				94C0FA5C29C890A500C951BD /* StarRewardView.swift */,
 			);
 			name = StarsRewards;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				9459E51529B6D0C200CDDD73 /* HomeHeaderView.swift in Sources */,
 				941E05E729C2984F00E64118 /* RewardGraphicView.swift in Sources */,
 				940A9F7729BC15E400B67FC6 /* TileView.swift in Sources */,
+				94C0FA5D29C890A500C951BD /* StarRewardView.swift in Sources */,
 				940A9F7329BC130200B67FC6 /* TileViewPlaceholderController.swift in Sources */,
 				940A9F7529BC15D500B67FC6 /* TileViewController.swift in Sources */,
 				9459E50E29B6A9F500CDDD73 /* Extension.swift in Sources */,
