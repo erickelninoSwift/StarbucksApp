@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9406419629CD466E0095A61D /* StarReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406419529CD466E0095A61D /* StarReviewRow.swift */; };
 		940A9F7329BC130200B67FC6 /* TileViewPlaceholderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9F7229BC130200B67FC6 /* TileViewPlaceholderController.swift */; };
 		940A9F7529BC15D500B67FC6 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9F7429BC15D500B67FC6 /* TileViewController.swift */; };
 		940A9F7729BC15E400B67FC6 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A9F7629BC15E400B67FC6 /* TileView.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9406419529CD466E0095A61D /* StarReviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarReviewRow.swift; sourceTree = "<group>"; };
 		940A9F7229BC130200B67FC6 /* TileViewPlaceholderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileViewPlaceholderController.swift; sourceTree = "<group>"; };
 		940A9F7429BC15D500B67FC6 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
 		940A9F7629BC15E400B67FC6 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				94C0FA5E29CA332300C951BD /* StarRewardView.swift */,
+				9406419529CD466E0095A61D /* StarReviewRow.swift */,
 			);
 			name = StarsRewards;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9406419629CD466E0095A61D /* StarReviewRow.swift in Sources */,
 				940A9F7A29BE59CA00B67FC6 /* RewardsViewController.swift in Sources */,
 				9459E51829BA3C7100CDDD73 /* Extensions.swift in Sources */,
 				940A9F7E29BE68A800B67FC6 /* BalanceView.swift in Sources */,
